@@ -2,8 +2,12 @@
   "name": "wineroad-back",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "postinstall": "npm run build",
     "build": "tsc",
     "start": "node dist/server.js"
   },
